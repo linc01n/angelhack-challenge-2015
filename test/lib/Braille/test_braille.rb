@@ -9,7 +9,7 @@ class TestBraille < MiniTest::Test
     @braille = Braille.new
     @braille_for_a = <<-EOF
 O.
-OO
+..
 ..
 EOF
 
