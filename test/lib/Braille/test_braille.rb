@@ -16,7 +16,7 @@ EOF
   end
 
   def test_convert_braille_char_for_a
-    assert_equal @braille.parse(@braille_for_a), "a"
+    assert_equal 'a', @braille.parse(@braille_for_a)
   end
 
 end
