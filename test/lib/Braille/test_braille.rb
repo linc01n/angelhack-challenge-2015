@@ -7,7 +7,16 @@ require 'braille'
 class TestBraille < MiniTest::Test
   def setup
     @braille = Braille.new
+    @braille_for_a = <<-EOF
+O.
+OO
+..
+EOF
+
   end
 
+  def test_convert_braille_char_for_a
+    assert_equal @braille.parse(@braille_for_a), "a"
+  end
 
 end
