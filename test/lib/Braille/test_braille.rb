@@ -28,4 +28,7 @@ EOF
     assert_equal "O.\nOO\n..\n", @braille.convert(@braille_for_helloword)[0]
   end
 
+  def test_translate
+    assert_equal "helloworld", @braille.translate(@braille_for_helloword)
+  end
 end
