@@ -114,6 +114,11 @@ O.
 OO
 ': "v",
 
+'.O
+OO
+.O
+': "w",
+
 'OO
 ..
 OO
@@ -131,6 +136,7 @@ OO
     }
 
     @char_array = []
+    @english_word = ""
   end
 
   def parse(input)
@@ -145,5 +151,13 @@ OO
       end
     end
     @char_array.map!{|char| char.join}
+  end
+
+  def translate(input_string)
+    convert(input_string)
+    @char_array.each do |char|
+      @english_word += parse(char)
+    end
+    @english_word
   end
 end
